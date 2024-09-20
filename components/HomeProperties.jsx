@@ -4,7 +4,7 @@ import { fetchProperties } from '@/actions/action-properties';
 
 const HomeProperties = async () => {
   const data = await fetchProperties();
-  console.log("data: ", data.properties)
+
   const recentProperties = data.properties.sort(() => 
      Math.random() - Math.random()).slice(0, 3);
 

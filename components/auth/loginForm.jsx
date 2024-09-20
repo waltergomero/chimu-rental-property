@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { doCredentialLogin } from '@/actions/user-actions';
 import Link from 'next/link';
 import SocialSignInForm from './socialSignInForm';
-import { SignIn } from './signIn';
+
 
 const LoginForm = () => {
 
@@ -39,7 +39,7 @@ const LoginForm = () => {
   return (
     <main className="w-full flex items-center justify-center min-h-screen">
     <div className="w-150 overflow-hidden rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-    <div className="px-4  ">
+    <div className="px-4 mb-4 ">
           <h3 className="mb-1.5 mt-4  text-center text-2xl font-semibold text-black dark:text-white">
             Sign in to your account
           </h3>
@@ -94,12 +94,12 @@ const LoginForm = () => {
           </Link>
           </div>
     </div>
-    <div className='mt-10'>
+    <div className='mt-4'>
     <button type="submit" className="flex w-full justify-center rounded bg-blue-500 p-3 font-medium text-gray hover:bg-opacity-90">
       Sign In
     </button>
     </div>
-    <div className="flex h-8 items-end space-x-1 mt-2" aria-live="polite" aria-atomic="true" >
+    <div className="flex items-end space-x-1 mt-2" aria-live="polite" aria-atomic="true" >
           {error && (
             <>
               <ExclamationCircleIcon className="h-6 w-6 text-danger" />
@@ -110,7 +110,6 @@ const LoginForm = () => {
         </div>
     </form>
        <SocialSignInForm/>
-       <SignIn/>
     </div>
     </div>
     </main>
