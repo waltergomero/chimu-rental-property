@@ -109,7 +109,8 @@ const Navbar = () => {
           {!session && (
             <div className='hidden md:block md:ml-6'>
               <div className='flex items-center'>
-                <Link href='/auth/' className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'>
+                <Link href='/api/auth/signin'
+                 className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'>
                   Login or Register
                 </Link>
                 {/* {providers &&

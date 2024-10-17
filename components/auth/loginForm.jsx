@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { doCredentialLogin } from '@/actions/user-actions';
 import Link from 'next/link';
 import SocialSignInForm from './socialSignInForm';
+import LoginPage from './loginPage';
 
 
 const LoginForm = () => {
@@ -28,11 +29,11 @@ const LoginForm = () => {
             console.error("error 1: ", response.error);
             setError(response.error.message);
         } else {
-            router.push("/dashboard");
+            router.push("/properties");
         }
     } catch (e) {
        console.error("error 2: ", e);
-        setError("Check your Credentials");
+        setError("Email or password is incorrect.");
     }
 }
 
@@ -110,6 +111,7 @@ const LoginForm = () => {
         </div>
     </form>
        <SocialSignInForm/>
+       <LoginPage/>
     </div>
     </div>
     </main>
